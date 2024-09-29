@@ -1,8 +1,6 @@
 # Импорт встроенной библиотеки для работы веб-сервера
 from http.server import BaseHTTPRequestHandler, HTTPServer
-import time
 
-import self
 
 # Для начала определим настройки запуска
 hostName = "localhost"  # Адрес для доступа по сети
@@ -16,7 +14,7 @@ class MyServer(BaseHTTPRequestHandler):
     """
 
     def do_GET(self):
-        path = f"../DJ/contacts.html"
+        path = "contacts.html"
 
         self.send_response(200)  # Отправка кода ответа
         self.send_header("Content-type", "text/html")  # Отправка типа данных, который будет передаваться
